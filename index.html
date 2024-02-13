@@ -56,9 +56,6 @@
       top: 10px;
       right: 85px;
     }
-    @media only screen and (max-width: 575px){
-      button { right: 51px; }
-    }
     button:hover {
       background-color: #e5dada;
       color: #241651;
@@ -95,10 +92,21 @@
     #audio, #active {
       display: none;
     }
+    #mobile {
+      display: none;
+    }
+
+    @media only screen and (max-width: 575px){
+      #mobile { display: flex; }
+      section { display: none; }
+    }
 
   </style>
 </head>
 <body>
+  <h2 id="mobile">
+    Solo disponible para PC
+  </h2>
   <section>
     <h1>Graba tu pantalla y se feliz.</h1>
     <div>
