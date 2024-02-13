@@ -8,13 +8,33 @@
   <style>
     body {
       height: 100vh;
-      background: #333;
+      background: #eee;
       display: flex;
       flex-direction: column;
       gap: 30px;
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      box-sizing: border-box;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 3px solid #241651;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 0;
+      width: 80%;
+      max-width: 350px;
+      min-height: 400px;
+      justify-content: space-evenly;
+    }
+    div {
+      position: relative;
+      width: 100%;
+      height: 70px;
     }
     button {
       width: 180px;
@@ -26,19 +46,22 @@
       padding-right: 33px;
       cursor: pointer;
       border: none;
-      border-radius: 8px;
-      background: #0d800d;
+      border-radius: 25px;
+      background: #702b9e;
       color: #dae5dc;
-      border-bottom: 5px solid #073d07;
+      border-bottom: 5px solid #241651;
       transition: transform 0.3s ease;
       font-weight: 500;
       position: absolute;
       top: 10px;
-      right: 51px;
+      right: 85px;
+    }
+    @media only screen and (max-width: 575px){
+      button { right: 51px; }
     }
     button:hover {
       background-color: #e5dada;
-      color: #073d07;
+      color: #241651;
     }
     button:active {
       transform: scale(0.95);
@@ -50,11 +73,13 @@
       margin-left: 20px;
     }
     h1 {
-      color: aliceblue;
+      color: #241651;
+      font-weight: 600;
       text-align: center;
     }
     label {
-      background: #000;
+      background: #e5dada;
+      border: 2px solid #e5dada;
       border-radius: 50%;
       width: 50px;
       height: 50px;
@@ -62,29 +87,15 @@
       justify-content: center;
       align-items: center;
       cursor: pointer;
-      opacity: 0.5;
       transition: all 0.3s ease;
     }
     label:hover {
-      opacity: 1;
+      border: 2px solid #555;
     }
     #audio, #active {
       display: none;
     }
-    section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border: 3px solid #111;
-      border-radius: 5px;
-      padding: 20px;
-      margin: 0;
-    }
-    div {
-      position: relative;
-      width: 100%;
-      height: 70px;
-    }
+
   </style>
 </head>
 <body>
